@@ -3,42 +3,15 @@ import React from "react";
 import { Box, Container, Grid, Typography, IconButton, Link, List, ListItem, ListItemText } from '@mui/material';
 import Stats from './Stats';
 import Image from 'next/image';
-import { makeStyles } from '@mui/styles';
-
+import DoneIcon from '@mui/icons-material/Done';
 
 const whyChooseUsTitle = "Why Choose Us?";
 const whyChooseUsContent = "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarks grove right at the coast of the Semantics, a large language ocean.";
-const useStyles = makeStyles((theme) => ({
-  ulCheck: {
-    listStyleType: 'none',
-    paddingLeft: 0,
-  },
-  listItem: {
-    position: 'relative',
-    paddingLeft: theme.spacing(2),
-    marginBottom: theme.spacing(1),
-  },
-  icon: {
-    position: 'absolute',
-    left: 0,
-    top: '-0.2rem',
-    color: '#007bff',
-    fontSize: '22px',
-    paddingRight: theme.spacing(2),
-  },
-  primaryIcon: {
-    color: '#005b8c',
-  },
-  whiteIcon: {
-    color: '#ffffff',
-  },
-}));
-
 const whyChooseUsList = [
-  "Separated they live",
-  "Bookmarksgrove right at the coast",
-  "Large language ocean"
-];
+    "Separated they live",
+    "Bookmarksgrove right at the coast",
+    "Large language ocean"
+  ];
 
 const ChooseUs = () => {
     return (
@@ -53,14 +26,13 @@ const ChooseUs = () => {
                 <Typography className="justify-text">
                   {whyChooseUsContent}
                 </Typography>
-                <Box component="ul" className={classes.ulCheck} data-aos="fade-up" data-aos-delay="200">
+                <ul className="mb-5" data-aos="fade-up" data-aos-delay="200" style={{ listStyleType: 'none' }}>
                   {whyChooseUsList.map((item, index) => (
-                    <li key={index} className={classes.listItem}>
-                      <span className={classes.icon}>✔</span>
-                      {item}
+                    <li key={index} className={index === 0 ? 'primary' : ''} style={{ position: 'relative',lineHeight:'2' }}>
+                      <DoneIcon sx={{ color: '#005b8c',fontSize:'25px'}}/> {item}
                     </li>
                   ))}
-                </Box>
+                </ul>
 
                 <Stats />
                 <Box mt={4} mb={4}>
