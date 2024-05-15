@@ -2,6 +2,7 @@ import Navbar from "@/Components/NavBar";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import '@/app/globals.css';
+import Footer from "@/Components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,7 +24,10 @@ export default function RootLayout({
         <div style={{ paddingTop: '64px' }}> {/* Adjust '64px' based on the height of your navbar */}
           {children}
         </div>
+
+        <Footer />
         </body>
+      
     </html>
   );
 }
