@@ -1,3 +1,4 @@
+"use client"
 import React, { useState, useRef } from 'react';
 import { Modal, TextField, Button, Typography, Paper, DialogTitle, IconButton } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';

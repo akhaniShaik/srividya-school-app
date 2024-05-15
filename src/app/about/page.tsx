@@ -1,3 +1,4 @@
+import React from 'react';
 import ImageWithOverlay from "@/Components/ImageWithOverlay";
 import SchoolPage from "@/Components/SchoolPage";
 

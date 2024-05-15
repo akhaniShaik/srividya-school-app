@@ -1,3 +1,4 @@
+import React from 'react';
 import FeeStructure from "@/Components/FeeStructure";
 import ImageWithOverlay from "@/Components/ImageWithOverlay";
 
