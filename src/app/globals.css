@@ -13,47 +13,12 @@ body {
   font-family: 'Arial', sans-serif !important; /* Replace with your preferred font family */
 }
 
-.ul-check li {
-  position: relative;
-  padding-left: 30px;
-  margin-bottom: 10px; 
-}
-  
-.ul-check li:before {
-    position: absolute;
-    left: 0;
-    top: -.2rem;
-    content: "\e5ca";
-    font-size: 20px;
-    font-family: 'icomoon';
-}
-
-.ul-check.primary li:before {
-  color: #005b8c; 
-}
-
-.ul-check.white li:before {
-  color: #ffffff; 
-}
-
 .row.count-numbers {
   display: flex;
   justify-content: space-between;
   margin-top: 2rem;
 }
 
-.counter {
-  font-size: 26px;
-  font-family: "Libre Baskerville", serif;
-  color: #005b8c;
-}
-
-.caption-2 {
-  display: block;
-  font-size: 1rem;
-  color: #555;
-  margin-top: 0.5rem;
-}
 
 .justify-text {
   text-align: justify;

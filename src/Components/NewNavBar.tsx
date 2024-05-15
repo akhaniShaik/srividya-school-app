@@ -75,7 +75,7 @@ const navItems: NavItem[] = [
   // Add more items as needed
 ];
 
-const NavigationBar = () => {
+const NewNavBar = () => {
   const [isSolid, setIsSolid] = useState(false);
   console.log(isSolid);
   const [openModal, setOpenModal] = React.useState(false);
@@ -242,4 +242,4 @@ const NavLink: React.FC<{
   </Link>
 );
 
-export default NavigationBar;
+export default NewNavBar;
