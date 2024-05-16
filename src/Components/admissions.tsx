@@ -61,10 +61,8 @@ export default function Articles() {
                 />
               </Box>
               <Box>
-                <Typography variant="h5" sx={{ mb: 1, mt: 2 }} color="#005b8c">
-                  <Link href={article.link}>
+                <Typography variant="h5" sx={{ mb: 1, mt: 2 }} color="#005b8c" >
                     {article.title}
-                  </Link>
                 </Typography>
                 <Typography variant="body2" color="#ccc" sx={{ whiteSpace: 'pre-line' }} mb={1}>
                   {article.cost.split(', ').map((slab, index) => (
