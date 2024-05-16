@@ -17,13 +17,25 @@ const ChooseUs = () => {
     return (
         <Box component="div" >
         <Container>
-          <Grid container spacing={4} >
+          <Grid container spacing={4} mt={4}>
             <Grid item xs={12} md={5}>
               <Box sx={{ gap: 2 }} mt={4}>
-                <Typography variant="h4" className="line-bottom" >
-                  {whyChooseUsTitle}
-                </Typography>
-                <Typography className="justify-text">
+                <Box sx={{ display: 'inline-block', position: 'relative' }}>
+                    <Typography variant="h4" color="#005b8c">
+                      {whyChooseUsTitle}
+                    </Typography>
+                    <Box sx={{
+                      position: 'absolute',
+                      bottom: '-10px',  // Adjust as needed to position the line correctly
+                      left: 0,
+                      width:'50px',
+                      right: 0,
+                      height: '3px',
+                      backgroundColor: '#ec661f',
+                    }} />
+                  </Box>
+                
+                <Typography textAlign="justify" lineHeight={2} mt={2} mb={2}>
                   {whyChooseUsContent}
                 </Typography>
                 <ul className="mb-5" data-aos="fade-up" data-aos-delay="200" style={{ listStyleType: 'none' }}>
@@ -33,13 +45,12 @@ const ChooseUs = () => {
                     </li>
                   ))}
                 </ul>
-
                 <Stats />
                 <Box mt={4} mb={4}>
-                <Link href="https://www.roboxautomation.com/" color="#FFFFFF" sx={{ bgcolor: '#005b8c', borderRadius: '30px', px: 4, py: 2, mr: 2, textDecoration:'none' }}>
+                <Link href="/" color="#FFFFFF" sx={{ bgcolor: '#005b8c', borderRadius: '30px', px: 3, py: 2, mr: 2, textDecoration:'none' }}>
                   Admission
                 </Link>
-                <Link href="https://www.roboxautomation.com/" color="#005b8c" sx={{ border:'1px solid #007bff', borderRadius: '30px', px: 4, py: 2,textDecoration:'none' }}>
+                <Link href="/" color="#005b8c" sx={{ border:'1px solid #007bff', borderRadius: '30px', px: 3, py: 2,textDecoration:'none' }}>
                   Learn More
                 </Link>
               </Box>

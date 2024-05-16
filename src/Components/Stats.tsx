@@ -11,23 +11,29 @@ const statsData = [
 
 const Stats = () => {
   return (
-    <Box className="row mb-5"  mt={4}>
-      {statsData.map((stat, index) => (
-        <Grid item xs={12} md={4} key={index} data-aos="fade-up" data-aos-delay={stat.delay}>
-        <CountUp
-          start={0}
-          end={stat.number}
-          duration={3}
-          separator=","
-          style={{ fontSize: '25px',color: '#005b8c' }}
-        />
-        {stat.number >= 1000 ? '+' : '' }
-        <Typography variant="body2" sx={{color: '#555', fontSize:'16px'}}>{stat.label}</Typography>
-        </Grid>
-      ))}
+    <Box mt={4}>
+      <Grid container spacing={2} className="mb-5"> {/* Adds spacing between grid items */}
+        {statsData.map((stat, index) => (
+          <Grid item xs={12} sm={6} md={3} key={index} data-aos="fade-up" data-aos-delay={stat.delay}>
+            {/* Ensure the container for the number and potential '+' sign is properly aligned */}
+            <Box sx={{ fontSize: '25px', color: '#005b8c', display: 'flex', alignItems: 'center' }}>
+              <CountUp
+                start={0}
+                end={stat.number}
+                duration={3}
+                separator=","
+              />
+              {stat.number >= 1000 && '+'}
+            </Box>
+
+            {/* Description label */}
+            <Typography variant="body2" sx={{color: '#555', fontSize:'16px'}}>
+              {stat.label}
+            </Typography>
+          </Grid>
+        ))}
+      </Grid>
     </Box>
-
-
   );
 };
 
