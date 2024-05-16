@@ -44,37 +44,80 @@ const teamMembers = [
 
 const TeamSection = () => {
   return (
-    <Box component="section" bgcolor="#f8f9fa">
+    <Box component="section" bgcolor="#f8f9fa" >
       <Container>
         <Box textAlign="center" mb={5} mt={5}>
-          <Typography variant="h4" className="line-bottom" >
-              {teamTitle}
-            </Typography>
+              <Box sx={{ display: 'inline-block', position: 'relative',marginTop:'50px' }}>
+                    <Typography variant="h4" color="#005b8c">
+                      {teamTitle}
+                    </Typography>
+                    <Box sx={{
+                      position: 'absolute',
+                      bottom: '-10px',  // Adjust as needed to position the line correctly
+                      left: 0,
+                      width:'50px',
+                      right: 0,
+                      height: '3px',
+                      backgroundColor: '#ec661f',
+                    }} />
+                  </Box>
             <Typography  align='center'  mb={2} mt={2}>
               {teamContent}
             </Typography>        
           </Box>
-        <Grid container spacing={4} >
+        <Grid container spacing={5} >
           {teamMembers.map((member, index) => (
-            <Grid  key={index} item xs={12} sm={6} md={4} data-aos="fade-up" data-aos-delay={index * 100}>
-              <Box textAlign='center'>
-                <Box textAlign='center' mb={2} borderRadius="50%" overflow="hidden" width={200} height={200} >
-                  <img src={member.image} alt="Image" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+            <Grid
+            key={index}
+            item
+            xs={12}
+            md={4}
+            textAlign="center"
+            data-aos="fade-up"
+            data-aos-delay={index * 100}
+            container
+            direction="column"
+            justifyContent="center"
+            alignItems="center"
+          >
+            <Box
+              mb={2}
+              borderRadius="50%"
+              overflow="hidden"
+              width={200}
+              height={200}
+              display="flex"
+              
+            >
+              <img src={member.image} alt="Image" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+            </Box>
+          
+            <Typography variant="h6" mt={2} mb={1}>
+              {member.name}
+            </Typography>
+            <Typography color="#999" sx={{ fontSize: '16px' }} mb={2}>
+              {member.position}
+            </Typography>
+            <Typography mb={3}>
+              {member.description}
+            </Typography>
+            
+            <Box display="flex" justifyContent="center" mb={4}>
+              {member.socialLinks.map((link, i) => (
+                <Box
+                  key={i}
+                  component="a"
+                  href={link.url}
+                  mx={2} // Adds margin to left and right
+                  color="#005b8c"
+                  display="inline-flex" // Makes sure the icons are in line
+                >
+                  {link.icon}
                 </Box>
-                <Box>
-                  <h3>{member.name}</h3>
-                  <p>{member.position}</p>
-                  <p>{member.description}</p>
-                  <Box>
-                    {member.socialLinks.map((link, i) => (
-                      <Box key={i} component="a" href={link.url} mx={2}>
-                        {link.icon}
-                      </Box>
-                    ))}
-                  </Box>
-                </Box>
-              </Box>
-            </Grid>
+              ))}
+            </Box>
+          </Grid>
+          
           ))}
         </Grid>
       </Container>

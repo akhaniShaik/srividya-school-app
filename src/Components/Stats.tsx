@@ -14,7 +14,7 @@ const Stats = () => {
     <Box mt={4}>
       <Grid container spacing={2} className="mb-5"> {/* Adds spacing between grid items */}
         {statsData.map((stat, index) => (
-          <Grid item xs={12} sm={6} md={3} key={index} data-aos="fade-up" data-aos-delay={stat.delay}>
+          <Grid item xs={12} sm={6} md={4} key={index} data-aos="fade-up" data-aos-delay={stat.delay}>
             {/* Ensure the container for the number and potential '+' sign is properly aligned */}
             <Box sx={{ fontSize: '25px', color: '#005b8c', display: 'flex', alignItems: 'center' }}>
               <CountUp
