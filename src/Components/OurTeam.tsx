@@ -13,7 +13,7 @@ const teamMembers = [
     name: 'Mina Collins',
     position: 'Teacher in Math',
     description: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.',
-    image: 'staff_1.jpg',
+    image: '/staff_1.jpg',
     socialLinks: [
       { icon: <FacebookIcon />, url: '#' },
       { icon: <TwitterIcon />, url: '#' },
@@ -24,7 +24,7 @@ const teamMembers = [
     name: 'Anderson Matthew',
     position: 'Teacher in Music',
     description: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.',
-    image: 'staff_2.jpg',
+    image: '/staff_2.jpg',
     socialLinks: [
       { icon: <FacebookIcon />, url: '#' },
       { icon: <TwitterIcon />, url: '#' },
@@ -35,7 +35,7 @@ const teamMembers = [
     name: 'Cynthia Misso',
     position: 'Teacher English',
     description: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.',
-    image: 'staff_3.jpg',
+    image: '/staff_3.jpg',
     socialLinks: [
       { icon: <FacebookIcon />, url: '#' },
       { icon: <TwitterIcon />, url: '#' },
@@ -91,12 +91,7 @@ const TeamSection = () => {
               display="flex"
               
             >
-            <Image 
-              src={member.image}
-              alt="Image"
-              layout="fill"
-              objectFit="cover"
-            />
+            <img src={member.image} alt="Image" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
             </Box>
           
             <Typography variant="h6" mt={2} mb={1}>
