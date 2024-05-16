@@ -60,12 +60,12 @@ const Footer = () => {
           </Grid>
 
           <Grid item xs={12} md={3}>
-            <Typography variant="h3" sx={{ fontSize: '16px' }}>{ galleryTitle }</Typography>
+            <Typography variant="h3" sx={{ fontSize: '16px' }}>{galleryTitle}</Typography>
             <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, mt: 3 }}>
               {galleryImages.map((i) => (
                 <Box key={i} sx={{ width: 72, height: 72 }}>
                   <Link href={`/gal_${i}.jpg`} target="_blank">
-                    <Image src={`/gal_${i}.jpg`} alt={`Gallery ${i}`} width={72} height={72} layout="fixed" />
+                    <Image src={`/gal_${i}.jpg`} alt={`Gallery ${i}`} width={72} height={72} style={{ width: '100%', height: '100%' }} />
                   </Link>
                 </Box>
               ))}

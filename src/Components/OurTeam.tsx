@@ -3,6 +3,8 @@ import { Box, Container, Grid, Typography } from '@mui/material';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import Image from 'next/image';
+
 
 const teamTitle = "Our Team";
 const teamContent = "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.";
@@ -89,20 +91,25 @@ const TeamSection = () => {
               display="flex"
               
             >
-              <img src={member.image} alt="Image" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+            <Image 
+              src={member.image}
+              alt="Image"
+              layout="fill"
+              objectFit="cover"
+            />
             </Box>
           
             <Typography variant="h6" mt={2} mb={1}>
               {member.name}
             </Typography>
-            <Typography color="#999" sx={{ fontSize: '16px' }} mb={2}>
+            <Typography color="#999"  mb={2}>
               {member.position}
             </Typography>
             <Typography mb={3}>
               {member.description}
             </Typography>
             
-            <Box display="flex" justifyContent="center" mb={4}>
+            <Box display="flex" justifyContent="center" mb={4} >
               {member.socialLinks.map((link, i) => (
                 <Box
                   key={i}
