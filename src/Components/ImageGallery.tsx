@@ -26,6 +26,12 @@ const overlayStyles = {
   },
   '&:hover .icon': {
     opacity: 1,
+  },
+  '& img': {
+    transition: 'transform 0.3s ease-in-out',
+  },
+  '&:hover img': {
+    transform: 'scale(1.1)', // Zoom effect on hover
   }
 };
 

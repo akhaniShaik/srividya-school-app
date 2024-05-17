@@ -5,7 +5,7 @@ import ImageGallery from "@/Components/ImageGallery";
 export default function BeyondPage() {
     return (
       <>
-        <ImageWithOverlay imageUrl={'/schoolBuilding-02.jpg'} title="Beyond Academics"/>
+        <ImageWithOverlay imageUrl={'/13.jpg'} title="Beyond Academics"/>
         <ImageGallery />
       </>
     );
