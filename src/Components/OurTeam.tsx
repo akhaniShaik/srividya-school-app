@@ -91,7 +91,7 @@ const TeamSection = () => {
               display="flex"
               
             >
-            <img src={member.image} alt="Image" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+            <Image src={member.image} alt="image" width={200} height={200} objectFit="cover" />
             </Box>
           
             <Typography variant="h6" mt={2} mb={1}>
