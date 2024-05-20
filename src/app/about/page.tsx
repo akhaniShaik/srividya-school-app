@@ -2,7 +2,7 @@ import React from 'react';
 import ImageWithOverlay from "@/Components/ImageWithOverlay";
 // import SchoolPage from "@/Components/SchoolPage";
 import WhyChooseUs from "@/Components/ChooseUs";
-import OurTeam from "@/Components/OurTeam";
+import TeamSection from "@/Components/TeamSection";
 
 
 export default function Aboutpage() {
@@ -10,7 +10,7 @@ export default function Aboutpage() {
       <>
         <ImageWithOverlay imageUrl={'/schoolBuilding-02.jpg'} title="About School"/>
         <WhyChooseUs/>
-        <OurTeam/>
+        <TeamSection/>
       </>
     );
   }

@@ -1,7 +1,7 @@
 import React from 'react';
 // import FeeStructure from "@/Components/FeeStructure";
 import ImageWithOverlay from "@/Components/ImageWithOverlay";
-import Admissions from "@/Components/admissions";
+import Articles from "@/Components/Articles";
 
 
 export default function AdmissionPage() {
@@ -10,7 +10,7 @@ export default function AdmissionPage() {
       <>
         <ImageWithOverlay imageUrl={'/Fee.jpg'} title={"FEES"}/>
         {/* <FeeStructure/> */}
-        <Admissions />
+        <Articles />
       </>
     );
   }
