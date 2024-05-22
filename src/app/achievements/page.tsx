@@ -3,7 +3,7 @@ import React from 'react';
 export default function AchievementsPage() {
     return (
       <>
-        <h1>Achievements page</h1>
+        <h1 style={{ marginTop: "60px" }}>Achievements page</h1>
       </>
     );
   }
